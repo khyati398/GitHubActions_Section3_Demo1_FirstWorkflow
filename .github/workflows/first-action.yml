@@ -1,11 +1,13 @@
+#Read the readme.md as well for important information and steps to create and run workflow.
 
-name: First Workflow
-on: workflow_dispatch
-jobs:
-  first-job:
-    runs-on: ubuntu-latest
-    steps:
+name: First Workflow #Name of the workflow
+on: workflow_dispatch #Defined a trigger to run workflow. workflow_dispatch is to mannually run the workflow.
+jobs: 
+  first-job: #Custom name of the job
+    runs-on: ubuntu-latest #This defines the environment i.e OS on which job should run
+    steps: #Defines the command to run on command line or you can provide pre-defined scripts as well
       - name: Print greeting
         run: echo "Hello World!"
       - name: Print goodbye
         run: echo "Done - bye!"
+
